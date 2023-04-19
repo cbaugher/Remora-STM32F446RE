@@ -24,7 +24,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <string> 
 #include "FATFileSystem.h"
 
-#if defined TARGET_LPC176X || TARGET_STM32F1 || TARGET_SPIDER || TARGET_MONSTER8 || TARGET_ROBIN_3 || TARGET_MANTA8
+#if defined TARGET_LPC176X || TARGET_STM32F1 || TARGET_SPIDER || TARGET_MONSTER8 || TARGET_ROBIN_3 || TARGET_MANTA8 || TARGET_NUCLEO_F446RE
 #include "SDBlockDevice.h"
 #elif defined TARGET_SKRV2 || TARGET_OCTOPUS_446 || TARGET_BLACK_F407VE || TARGET_OCTOPUS_429 | TARGET_SKRV3
 #include "SDIOBlockDevice.h"
@@ -148,10 +148,14 @@ volatile uint16_t* ptrOutputs;
     SDBlockDevice blockDevice(PA_7, PA_6, PA_5, PA_4);  // mosi, miso, sclk, cs
     RemoraComms comms(ptrRxData, ptrTxData, SPI1, PC_6);    // use PC_6 as "slave select"
 
+#elif defined TARGET_NUCLEO_F446RE 
+    SDBlockDevice blockDevice(PA_7, PA_6, PA_5, PB_5);  // mosi, miso, sclk, cs
+    RemoraComms comms(ptrRxData, ptrTxData, SPI2, PB_1);    // use PC_1 as "slave select"
+
 
 #elif defined TARGET_MANTA8
     SDBlockDevice blockDevice(PA_7, PA_6, PA_5, PA_8);  // mosi, miso, sclk, cs
-    RemoraComms comms(ptrRxData, ptrTxData, SPI1, PB_12);    // use PB_12 as "slave select"
+    RemoraComms comms(ptrRxData, ptrTxData, SPI2, PB_12);    // use PB_12 as "slave select"
 
 #endif
 

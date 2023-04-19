@@ -23,6 +23,16 @@
             "target.components_add" : ["SD"]
         },
         
+        "NUCLEO_F446RE": { 
+            "platform.stdio-baud-rate": 115200,
+            "target.features_add": ["STORAGE"],
+            "target.components_add" : ["SD"],
+            "sd.SPI_MOSI": "PA_7",
+            "sd.SPI_MISO": "PA_6",
+            "sd.SPI_CLK":  "PA_4",
+            "sd.SPI_CS":   "PB_5"
+        },
+
         "MANTA8": {
             "target.mbed_app_start": "0x08002000",
             "platform.stdio-baud-rate": 115200,

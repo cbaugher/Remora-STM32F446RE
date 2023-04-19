@@ -19,6 +19,7 @@
         "device_name": "STM32G0B1RETx",
         "bootloader_supported": true
     },
+
     "SKRV3": {
         "inherits": [
             "MCU_STM32H743xI"
