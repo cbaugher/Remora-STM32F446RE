@@ -1,13 +1,6 @@
-# cakeslob Remora thing - trying to do stuff he doesnt understand, but will try anyways
+# Remora Nucleo64 with SD shield
 
-Things on the go but arent working:
-  - SKR3 STM32H743 : starts with the bootloader and then everything else
-  - MANTA M8P STM32G0B1 : almost everything working , dmamux and comms thing i dont understand
-  - MKS MONSTER8/ROBIN V3.1/SKIPR STM32F407 : With bootloader, bootloader is turning off spi after boot. Without bootloader, it works
-
-Things working now:
-- BTT Octopus STM32F446 working, with bootloader
-- Fysetc Spider STM32F446 working, with bootloader
+This is a basic initial repo taylored to the STM Nucleo64, specifically the STM32F446, but could possibly be configured for otheres. Uses SD shield pinout for SD card, and SPI2 for connection to RPI4, with pins PB1, PB13, PB14 and PB15
 
 # Remora
 
