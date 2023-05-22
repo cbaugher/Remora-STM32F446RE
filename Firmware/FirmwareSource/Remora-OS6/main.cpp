@@ -128,34 +128,20 @@ volatile uint16_t* ptrOutputs;
     SDIOBlockDevice blockDevice;
     RemoraComms comms(ptrRxData, ptrTxData, SPI1, PA_4);
 
-#elif defined TARGET_MONSTER8
-    SDBlockDevice blockDevice(PC_12, PC_11, PC_10, PC_9);  // mosi, miso, sclk, cs
-    RemoraComms comms(ptrRxData, ptrTxData, SPI1, PA_4);
 
-#elif defined TARGET_ROBIN_3
-    SDBlockDevice blockDevice(PC_12, PC_11, PC_10, PC_9);  // mosi, miso, sclk, cs
-    RemoraComms comms(ptrRxData, ptrTxData, SPI1, PE_10);  //use PE_10 as "slave select"
-
-#elif defined TARGET_ROBIN_E3
-    SDBlockDevice blockDevice(PB_15, PB_14, PB_13, PA_15);  // mosi, miso, sclk, cs
-    RemoraComms comms(ptrRxData, ptrTxData, SPI1, PA_4);
-
-#elif defined TARGET_SKR_MINI_E3
-    SDBlockDevice blockDevice(PA_7, PA_6, PA_5, PA_4);  // mosi, miso, sclk, cs
-    RemoraComms comms(ptrRxData, ptrTxData, SPI1, PC_1);    // use PC_1 as "slave select"
-
-#elif defined TARGET_SPIDER
-    SDBlockDevice blockDevice(PA_7, PA_6, PA_5, PA_4);  // mosi, miso, sclk, cs
-    RemoraComms comms(ptrRxData, ptrTxData, SPI1, PC_6);    // use PC_6 as "slave select"
-
+/*
+// SPI1 SD
 #elif defined TARGET_NUCLEO_F446RE 
     SDBlockDevice blockDevice(PA_7, PA_6, PA_5, PB_5);  // mosi, miso, sclk, cs
     RemoraComms comms(ptrRxData, ptrTxData, SPI2, PB_1);    // use PC_1 as "slave select"
+*/
+
+#elif defined TARGET_NUCLEO_F446RE 
+    SDBlockDevice blockDevice(PB_15, PB_14, PB_13, PC_4);  // mosi, miso, sclk, cs  SPI2 SD
+    RemoraComms comms(ptrRxData, ptrTxData, SPI2, PB_1);    // use PB_1 as "slave select"
 
 
-#elif defined TARGET_MANTA8
-    SDBlockDevice blockDevice(PA_7, PA_6, PA_5, PA_8);  // mosi, miso, sclk, cs
-    RemoraComms comms(ptrRxData, ptrTxData, SPI2, PB_12);    // use PB_12 as "slave select"
+
 
 #endif
 
