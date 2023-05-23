@@ -1,4 +1,4 @@
-# Remora Nucleo64 with SD shield
+# Remora Nucleo64 with CNC shield and SD module
 
 This is a basic initial repo taylored to the STM Nucleo64, specifically the STM32F446, but could possibly be configured for otheres. Uses SD shield pinout for SD card, and SPI2 for connection to RPI4, with pins PB1, PB13, PB14 and PB15
 
