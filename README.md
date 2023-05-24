@@ -7,7 +7,7 @@ This repo is for a setup using a STM Nucleo64 STM32F446 with classic CNC shield 
 
 
 Documentation here 
-https://github.com/cakeslob/Remora-docs/blob/skr2/docs/source/hardware/nucleo446.rst
+https://github.com/cakeslob/Remora-docs/blob/nucleo/docs/source/hardware/nucleo446.rst
 
 <img src="/nucleo446_pi.png" >
 <img src="/nucleo446_sd.png" >
