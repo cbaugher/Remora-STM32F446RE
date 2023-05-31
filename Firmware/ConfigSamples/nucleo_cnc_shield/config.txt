@@ -13,7 +13,7 @@
 		"Comment":			"X DRIVER0 - Joint 0 step generator",
 		"Joint Number":		0,
 		"Step Pin": 		"PA_10",
-		"Direction Pin": 	"PB_4",
+		"Direction Pin": 	"PB_4"
 	},
 	{
 	"Thread": "Base",
@@ -21,7 +21,7 @@
 		"Comment":			"Y DRIVER1 - Joint 1 step generator",
 		"Joint Number":		1,
 		"Step Pin": 		"PB_3",
-		"Direction Pin": 	"PB_10",
+		"Direction Pin": 	"PB_10"
 	},
 	{
 	"Thread": "Base",
@@ -29,7 +29,7 @@
 		"Comment":			"Z DRIVER2 - Joint 2 step generator",
 		"Joint Number":		2,
 		"Step Pin": 		"PB_5",
-		"Direction Pin": 	"PA_8",
+		"Direction Pin": 	"PA_8"
 	},
 	{
 	"Thread": "Base",
@@ -37,7 +37,7 @@
 		"Comment":			"A DRIVER3 - Joint 3 step generator",
 		"Joint Number":		3,
 		"Step Pin": 		"PA_6",
-		"Direction Pin": 	"PA_5",
+		"Direction Pin": 	"PA_5"
 	},
 	{
 	"Thread": "Servo",
