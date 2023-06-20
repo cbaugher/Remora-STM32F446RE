@@ -16,11 +16,11 @@ void createTMC2208()
 
     const char* RxPin = module["RX pin"];
     float RSense = module["RSense"];
-    //uint8_t address = module["Address"];
+    uint8_t address = module["Address"];
     uint16_t current = module["Current"];
     uint16_t microsteps = module["Microsteps"];
     const char* stealth = module["Stealth chop"];
-    //uint16_t stall = module["Stall sensitivity"];
+    uint16_t stall = module["Stall sensitivity"];
 
     bool stealthchop;
 
@@ -36,15 +36,17 @@ void createTMC2208()
     // SW Serial pin, RSense, mA, microsteps, stealh
     // TMC2208(std::string, float, uint8_t, uint16_t, uint16_t, bool);
     Module* tmc = new TMC2208(RxPin, RSense, current, microsteps, stealthchop);
-   commsThread->registerModule(tmc);
 
     printf("\nStarting the COMMS thread\n");
     commsThread->startThread();
+    commsThread->registerModule(tmc);
+
     tmc->configure();
 
     printf("\nStopping the COMMS thread\n");
     commsThread->stopThread();
     commsThread->unregisterModule(tmc);
+
     delete tmc;
 }
 

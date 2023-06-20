@@ -64,7 +64,6 @@ void QEI::update()
     {
         // handle index, index pulse and pulse count
         if (this->qei->indexDetected && (this->pulseCount == 0))    // index interrupt occured: rising edge on index pulse
-        //if (this->qei->indexDetected && (this->pulseCount == 0))    
         {
             *(this->ptrEncoderCount) = this->qei->indexCount;
             this->pulseCount = this->indexPulse;        
